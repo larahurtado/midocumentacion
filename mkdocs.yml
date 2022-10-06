@@ -1,0 +1,26 @@
+site_name: Documentacion
+
+nav:
+  - Bienvenida : 'index.md'
+  - Documentacion:
+    - REHL: '!include ./TemasRHEL/mkdocs.yml'
+
+theme: 
+  name: material
+  palette:
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - pdf-export
+  - monorepo
+

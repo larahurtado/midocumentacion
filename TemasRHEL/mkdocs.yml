@@ -1,0 +1,13 @@
+site_name: Documentacion RHEL y Fedora
+
+nav:
+  - Inicio : index.md
+  - NTP (Network Time Protocol) : ntp.md
+  - SAR (Supervisión de actividades del sistema) : sar.md
+  - Troubleshooting en perdida de paquetes : troubleshooting.md
+  - Recuperacion de Sistemas de Archivos con FSCK : fsck.md
+  - Creacion Repositorios Locales : repolocales.md
+  - Generación de Certificados JKS: gencertjks.md
+  - Incremento de Almacenamiento: incalmacenamiento.md
+
+
