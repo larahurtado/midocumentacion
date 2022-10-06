@@ -4,6 +4,7 @@ nav:
   - Inicio : index.md
   - NTP (Network Time Protocol) : ntp.md
   - SAR (Supervisión de actividades del sistema) : sar.md
+  - Firewall : firewall.md
   - Troubleshooting en perdida de paquetes : troubleshooting.md
   - Recuperacion de Sistemas de Archivos con FSCK : fsck.md
   - Creacion Repositorios Locales : repolocales.md
