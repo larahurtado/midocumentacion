@@ -61,4 +61,17 @@ Host                                 Loss%  Snt  Last Avg Best Wrst StDev
 
 Dentro de una red interna se veria  mejor el efecto ya que uno conoce aproximandamente que dispositivos existen dentro de la red.
 
+## Comando ifstat
 
+
+
+```bash
+[user@linux ~]$ ifstat 
+#kernel
+Interface        RX Pkts/Rate    TX Pkts/Rate    RX Data/Rate    TX Data/Rate  
+                 RX Errs/Drop    TX Errs/Drop    RX Over/Rate    TX Coll/Rate  
+lo                    42 0            42 0          5034 0          5034 0      
+                       0 0             0 0             0 0             0 0      
+enp0s3             21374 0          9055 0        23389K 0         1831K 0      
+                       0 0             0 0             0 0             0 0 
+```
