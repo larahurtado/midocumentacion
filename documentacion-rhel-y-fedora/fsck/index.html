@@ -398,6 +398,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -507,6 +514,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -526,7 +540,31 @@
 
 <h2 id="sistema-de-archivos-xfs">Sistema de archivos XFS</h2>
 <h2 id="sistema-de-archivos-ext4">Sistema de archivos Ext4</h2>
+<p>Es una extension escalable del sistemas de archivos ext3, este sistema esta diseñado para soportar hasta 16 TB en su sistema de archivos, ademas que retira el límite de subdirectorio de 32000 presente en ext3.</p>
+<p><strong>Nota:</strong> Se recomienda que para sistemas de archivos superiores a 16  TB , se se el Sistema de archivos XFS.</p>
+<p>Aunque este sistema de archivos sea optimo para la mayoria de cargas de trabajo,    puede surgir que su rendimiento sea afectado por lo cual existen diferentes opciones de ajustes para tratarlo.</p>
+<ul>
+<li>
+<p>Inicializacion de tabla de inodo</p>
+</li>
+<li>
+<p>Conducta de Auto-fsync</p>
+</li>
+<li>
+<p>Prioridad de E / S de diario</p>
+</li>
+</ul>
+<p>para obtener mas informacion de estos ajustes, selecionar el enlace 1 del apartado de referencias.</p>
 <h2 id="fsck">fsck</h2>
+<h2 id="referencias">Referencias</h2>
+<ol>
+<li>
+<p><a href="https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/performance_tuning_guide/s-storage-fs">Sistemas de archivo Ext4, redhat.</a></p>
+</li>
+<li>
+<p><a href="[7.3.2. Sistema de archivos XFS Red Hat Enterprise Linux 6 | Red Hat Customer Portal](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/performance_tuning_guide/s-storage-xfs)">Sistemas de archivos XFS, redhat.</a></p>
+</li>
+</ol>
 
 
 
