@@ -377,6 +377,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#comando-ifstat" class="md-nav__link">
+    Comando ifstat
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -493,6 +500,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#comando-ifstat" class="md-nav__link">
+    Comando ifstat
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -553,6 +567,16 @@ Host                                 Loss%  Snt  Last Avg Best Wrst StDev
 3. dns.google                            0.0% 439   0.7 0.6 0.2
 </code></pre>
 <p>Dentro de una red interna se veria  mejor el efecto ya que uno conoce aproximandamente que dispositivos existen dentro de la red.</p>
+<h2 id="comando-ifstat">Comando ifstat</h2>
+<pre><code class="language-bash">[user@linux ~]$ ifstat 
+#kernel
+Interface        RX Pkts/Rate    TX Pkts/Rate    RX Data/Rate    TX Data/Rate  
+                 RX Errs/Drop    TX Errs/Drop    RX Over/Rate    TX Coll/Rate  
+lo                    42 0            42 0          5034 0          5034 0      
+                       0 0             0 0             0 0             0 0      
+enp0s3             21374 0          9055 0        23389K 0         1831K 0      
+                       0 0             0 0             0 0             0 0 
+</code></pre>
 
 
 
