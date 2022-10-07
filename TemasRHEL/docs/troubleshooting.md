@@ -81,6 +81,43 @@ enp0s3             21374 0          9055 0        23389K 0         1831K 0
 
 podemos ver que en paquetes enviados por nuesta interfaz en0s3(TX Pkts) no tuvo ningun paquete con error(TX errs) o caido(Drop) y sucede lo mismo con los paquetes que entraron(RX pkts) por la misma interfaz.
 
+## Comando tcpdump
 
+Es una herramienta la cual analiza el trafico que circula por la red de todas las interfaz que cuenta su dispositivo. 
+
++ Ejemplo de salida de este comando:
+
+```bash
+[user@linux ~]$ sudo tcpdump 
+
+dropped privs to tcpdump
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+11:39:01.575406 IP 8.2.110.21.https > localhost.51002: Flags [P.], seq 651654678:651654709, ack 503686153, win 65535, length 31
+11:39:01.575625 IP localhost.51002 > 8.2.110.21.https: Flags [.], ack 31, win 62780, length 0
+11:39:01.575687 IP 8.2.110.21.https > localhost.51002: Flags [F.], seq 31, ack 1, win 65535, length 0
+11:39:01.582224 IP localhost.60581 > _gateway.domain: 31841+ [1au] PTR? 21.110.2.8.in-addr.arpa. (52)
+11:39:01.622870 IP localhost.51002 > 8.2.110.21.https: Flags [.], ack 32, win 62780, length 0
+11:39:01.727822 IP _gateway.domain > localhost.60581: 31841 NXDomain 0/1/1 (120)
+11:39:01.728820 IP localhost.60581 > _gateway.domain: 31841+ PTR? 21.110.2.8.in-addr.arpa. (41)
+```
+
++ Selecionar el trafico de red de una interfaz especifica
+
+```bash
+[user@linux ~]$ sudo tcpdump -i enp0s3
+
+dropped privs to tcpdump
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+11:49:42.388944 IP localhost.49154 > 143.244.35.229.https: Flags [.], ack 648537732, win 65535, length 0
+11:49:42.389131 IP localhost.37554 > 38.71.2.236.https: Flags [.], ack 649856621, win 64064, length 0
+11:49:42.389522 IP localhost.traceroute > e2a.google.com.https: Flags [.], ack 656837815, win 62780, length 0
+11:49:42.389576 IP localhost.52408 > ext-189-247-217-56.uninet.net.mx.https: Flags [.], ack 644805732, win 63970, length 0
+11:49:42.389602 IP localhost.53120 > ext-189-247-217-33.uninet.net.mx.https: Flags [.], ack 643410929, win 62780, length 0
+11:49:42.389625 IP localhost.52396 > ext-189-247-217-56.uninet.net.mx.https: Flags [.], ack 644627159, win 62780, length 0
+11:49:42.389735 IP 143.244.35.229.https > localhost.49154: Flags [.], ack 1, win 65535, length 0
+
+```
 
 
