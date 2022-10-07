@@ -53,21 +53,24 @@ Este comando nos permite ver los saltos(traceroute) que realiza el ordenador al 
 fedora (10.0.2.15) -> 8.8.8.8 (8.8.8.8)           2022-10-06T15:00:27-0500
 keys: Help Display Mode    Restart statistics  order of fields quit
                                       Packets             Pings
-Host                                 Loss%  Snt  Last Avg Best Wrst StDev
-1. _gateway                            0.0% 439   0.7 0.6 0.2
-2. 192.168.1.254                            0.0% 439   0.7 0.6 0.2
-3. dns.google                            0.0% 439   0.7 0.6 0.2
+Host                                 Loss%  Snt   Last   Avg  Best  Wrst StDev
+1. _gateway                           0.0%   8     0.7   0.6   0.2   0.3   0.1
+2. 192.168.1.254                      0.0%   8     0.7   0.6   0.2   0.3   0.1
+3. dns.google                         0.0%   7     0.7   0.6   0.2   0.3   0.1
 ```
 
 Dentro de una red interna se veria  mejor el efecto ya que uno conoce aproximandamente que dispositivos existen dentro de la red.
 
 ## Comando ifstat
 
+Es una herramienta para informar la actividad de un interfaz. 
 
++ Ejemplo
 
 ```bash
 [user@linux ~]$ ifstat 
-#kernel
+                #host            #tuordenador
+#kernel         #EntradaPaq      #SalidaPaq      #EntradaData    #SalidaData
 Interface        RX Pkts/Rate    TX Pkts/Rate    RX Data/Rate    TX Data/Rate  
                  RX Errs/Drop    TX Errs/Drop    RX Over/Rate    TX Coll/Rate  
 lo                    42 0            42 0          5034 0          5034 0      
@@ -75,3 +78,9 @@ lo                    42 0            42 0          5034 0          5034 0
 enp0s3             21374 0          9055 0        23389K 0         1831K 0      
                        0 0             0 0             0 0             0 0 
 ```
+
+podemos ver que en paquetes enviados por nuesta interfaz en0s3(TX Pkts) no tuvo ningun paquete con error(TX errs) o caido(Drop) y sucede lo mismo con los paquetes que entraron(RX pkts) por la misma interfaz.
+
+
+
+
