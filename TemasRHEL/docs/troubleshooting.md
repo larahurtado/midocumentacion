@@ -117,7 +117,4 @@ listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 11:49:42.389602 IP localhost.53120 > ext-189-247-217-33.uninet.net.mx.https: Flags [.], ack 643410929, win 62780, length 0
 11:49:42.389625 IP localhost.52396 > ext-189-247-217-56.uninet.net.mx.https: Flags [.], ack 644627159, win 62780, length 0
 11:49:42.389735 IP 143.244.35.229.https > localhost.49154: Flags [.], ack 1, win 65535, length 0
-
 ```
-
-
