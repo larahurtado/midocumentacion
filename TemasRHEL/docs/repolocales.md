@@ -6,14 +6,13 @@ Para agregar repositorios externos existen dos formas para hacerlo
    
    + Sintaxis basica de un archivo .repo
    
-   ```bash
-   [etiqueta]
-   name=#nombre del servicio
-   baseurl=#url anydesk
-   gpgcheck=#
-   repo_gpgcheck=#
-   gpgkey=#
-   ```
+```bash
+name=#nombre del servicio
+baseurl=#url anydesk
+gpgcheck=#
+repo_gpgcheck=#
+gpgkey=#
+```
 
      
 
