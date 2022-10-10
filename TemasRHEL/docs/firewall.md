@@ -19,5 +19,3 @@ firewall-cmd --panic-off
 ```bash
 firewall-cmd --query-panic
 ```
-
-

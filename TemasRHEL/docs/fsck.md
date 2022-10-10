@@ -32,12 +32,30 @@ para obtener mas informacion de estos ajustes, selecionar el enlace 1 del aparta
 
 ## fsck
 
+1. Verificar el sistema de archivos de cada montaje
 
+```bash
+df -Th
+```
+
+    o tambien puede usar 
+
+```bash
+lsblk -f
+```
+
+2. Usar el comando siguiente para repara el sistema de archivo
+
+```bash
+#posibles 
+[user@linux ~]$ fsck -y /dev/sda2
+
+#o tambien 
+[user@linux ~]$ fsck.ext4 -y /dev/sda2
+```
 
 ## Referencias
 
 1. [Sistemas de archivo Ext4, redhat.](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/performance_tuning_guide/s-storage-fs)
 
 2. [Sistemas de archivos XFS, redhat.](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/performance_tuning_guide/s-storage-xfs)
-
-
