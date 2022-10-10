@@ -597,6 +597,23 @@
 <p>para obtener mas informacion de estos ajustes, selecionar el enlace 1 del apartado de referencias.</p>
 <hr />
 <h2 id="fsck">fsck</h2>
+<ol>
+<li>Verificar el sistema de archivos de cada montaje</li>
+</ol>
+<pre><code class="language-bash">df -Th
+</code></pre>
+<p>o tambien puede usar </p>
+<pre><code class="language-bash">lsblk -f
+</code></pre>
+<ol>
+<li>Usar el comando siguiente para repara el sistema de archivo</li>
+</ol>
+<pre><code class="language-bash">#posibles 
+[user@linux ~]$ fsck -y /dev/sda2
+
+#o tambien 
+[user@linux ~]$ fsck.ext4 -y /dev/sda2
+</code></pre>
 <h2 id="referencias">Referencias</h2>
 <ol>
 <li>
