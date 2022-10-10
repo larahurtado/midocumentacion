@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#anadir-repositorio" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -364,9 +369,38 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Creacion Repositorios Locales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Creacion Repositorios Locales
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-repositorio" class="md-nav__link">
+    Añadir Repositorio
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -432,6 +466,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-repositorio" class="md-nav__link">
+    Añadir Repositorio
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -447,7 +496,25 @@
 
   <h1>Creacion Repositorios Locales</h1>
 
-
+<h2 id="anadir-repositorio">Añadir Repositorio</h2>
+<p>Para agregar repositorios externos existen dos formas para hacerlo</p>
+<ol>
+<li>Crear y editar un archivo <strong>.repo</strong>  en "/etc/yum.repos.d/" con la siguiente estructura:</li>
+<li>Sintaxis basica de un archivo .repo</li>
+</ol>
+<p>```bash
+   [etiqueta]
+   name=#nombre del servicio
+   baseurl=#url anydesk
+   gpgcheck=#
+   repo_gpgcheck=#
+   gpgkey=#</p>
+<p>```</p>
+<ol>
+<li>usando el comando:</li>
+</ol>
+<pre><code class="language-bash">dnf config-manager
+</code></pre>
 
 
 
