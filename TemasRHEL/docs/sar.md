@@ -34,8 +34,6 @@ java -jar ksar-5.2.4-b396_gf0680721-SNAPSHOT-all.jar
 
 Para poder graficar los archivos que genera el comando sar es 
 
-
-
 ---
 
 ## Graficar datos de sar con SARchart
