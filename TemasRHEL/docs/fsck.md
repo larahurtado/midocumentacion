@@ -38,4 +38,6 @@ para obtener mas informacion de estos ajustes, selecionar el enlace 1 del aparta
 
 1. [Sistemas de archivo Ext4, redhat.](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/performance_tuning_guide/s-storage-fs)
 
-2. [Sistemas de archivos XFS, redhat.]([7.3.2. Sistema de archivos XFS Red Hat Enterprise Linux 6 | Red Hat Customer Portal](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/performance_tuning_guide/s-storage-xfs)
+2. [Sistemas de archivos XFS, redhat.](7.3.2. Sistema de archivos XFS Red Hat Enterprise Linux 6 | Red Hat Customer Portal](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/performance_tuning_guide/s-storage-xfs)
+
+
