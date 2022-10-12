@@ -596,49 +596,49 @@ gpgkey=
 <ol>
 <li>Actualizar las listas de repositorios:</li>
 </ol>
-<p><code>bash
-   dnf update --refresh</code></p>
+<pre><code class="language-bash">dnf update --refresh
+</code></pre>
 <ul>
 <li>(OPCIONAL)si requiere eliminar los packequetes que fueron descargado anterior mente.</li>
 </ul>
-<p><code>bash
-   dnf clean all</code></p>
+<pre><code class="language-bash">dnf clean all
+</code></pre>
 <ol>
 <li>Instale el paquete que se encuentra en el repositorio agregado:</li>
 </ol>
-<p><code>bash
-   dnf install &lt;Nombredelpaquete&gt;</code></p>
+<pre><code class="language-bash">dnf install &lt;Nombredelpaquete&gt;
+</code></pre>
 <hr />
 <h2 id="crear-un-servidor-de-repositorios">Crear un servidor de repositorios</h2>
 <h3 id="requisitos">Requisitos</h3>
 <p>Tener instalado los siguiente paquetes</p>
 <ul>
-<li>apache</li>
+<li>Instalacion de apache</li>
 </ul>
-<p><code>bash
-  sudo dnf install httpd</code></p>
+<pre><code class="language-bash">sudo dnf install httpd
+</code></pre>
 <ul>
-<li>createrepo</li>
+<li>Instalacion de createrepo</li>
 </ul>
-<p><code>bash
-  sudo dnf install createrepo</code></p>
+<pre><code class="language-bash">sudo dnf install createrepo
+</code></pre>
 <h3 id="procedimiento">Procedimiento</h3>
 <ol>
 <li>Crear un directorio en <strong>/var/www/html</strong> donde guardaremos nuestros Packages  y repodata, tomar en cuenta que este deve tener una estructura como <strong>/var/www/html/repositorio/<SO>/<arquitectura></strong></li>
 </ol>
-<p><code>bash
-   mkdir /var/www/html/repositorio/fedora/x86_64</code></p>
+<pre><code class="language-bash">mkdir /var/www/html/repositorio/fedora/x86_64
+</code></pre>
 <ol>
 <li>Dentro de la anterior ruta crear el directorio <strong>Packages</strong></li>
 </ol>
-<p><code>bash
-   mkdir /var/www/html/repositorio/fedora/x86_64/Packages</code></p>
+<pre><code class="language-bash">mkdir /var/www/html/repositorio/fedora/x86_64/Packages
+</code></pre>
 <p>En este directorio guardaras todos los .rpm que deseas agregar a tu servidor.</p>
 <ol>
 <li>Ahora generaremos los metadatos xml:</li>
 </ol>
-<p><code>bash
-   createrepo /var/www/html/repositorio/fedora/x86_64</code></p>
+<pre><code class="language-bash">createrepo /var/www/html/repositorio/fedora/x86_64
+</code></pre>
 <p>El comando anterior generara un diretorio con nombre <strong>repodata</strong> el cual su contenido son los metadatos  xml, este comando se debe de ejecutar cuando su carpeta Package fue modificada(elimino o agrego un rpm).</p>
 <ol>
 <li>Apartir de ahora ya tiene su servidor de paquetes listo, solo tiene que añadir el repositorio tal y como aparace en esta pagina en el apartado <strong>Añadir repositorio</strong></li>
