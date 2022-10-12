@@ -398,6 +398,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#crear-un-servidor-de-repositorios" class="md-nav__link">
+    Crear un servidor de repositorios
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear un servidor de repositorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    Requisitos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimiento" class="md-nav__link">
+    Procedimiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-de-rpm-app" class="md-nav__link">
+    Enlaces de RPM app
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -479,6 +513,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#crear-un-servidor-de-repositorios" class="md-nav__link">
+    Crear un servidor de repositorios
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear un servidor de repositorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    Requisitos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimiento" class="md-nav__link">
+    Procedimiento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces-de-rpm-app" class="md-nav__link">
+    Enlaces de RPM app
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -506,18 +574,87 @@
 <p>Sintaxis basica de un archivo .repo</p>
 </li>
 </ol>
-<pre><code class="language-bash">[etiqueta]
-name=#nombre del servicio
-baseurl=#url anydesk
-gpgcheck=#
-repo_gpgcheck=#
-gpgkey=#
+<pre><code class="language-bash">#nombre que recibira el repo
+[etiqueta]
+#nombre del repo
+name= Fedora
+#url anydesk.com/fedora/x86_64 or http:127.0.0.1/fedora/x86_64
+baseurl= http://127.0.0.1/repositorio/fedora/x86_64/
+# valor logico 1= verdadero 0 = falso, este parametro sirve para habilitar el reposito cuando se ejecute dnf update
+enabled=1
+# valor logico 1= verdadero 0 = falso, este parametro indica que si es necesario usar un gpgkey si es falso no es necesario porner 
+gpgcheck=0
+# url donde se ubica el gpgkey
+gpgkey=
 </code></pre>
 <ol>
 <li>usando el comando:</li>
 </ol>
-<pre><code class="language-bash">dnf config-manager
+<pre><code class="language-bash">dnf config-manager --ad-repo &lt;urlrepo&gt;
 </code></pre>
+<p>Cuando agregue uno o varios repositorios nuevo es necesario hacer lo siguiente:</p>
+<ol>
+<li>Actualizar las listas de repositorios:</li>
+</ol>
+<p><code>bash
+   dnf update --refresh</code></p>
+<ul>
+<li>(OPCIONAL)si requiere eliminar los packequetes que fueron descargado anterior mente.</li>
+</ul>
+<p><code>bash
+   dnf clean all</code></p>
+<ol>
+<li>Instale el paquete que se encuentra en el repositorio agregado:</li>
+</ol>
+<p><code>bash
+   dnf install &lt;Nombredelpaquete&gt;</code></p>
+<hr />
+<h2 id="crear-un-servidor-de-repositorios">Crear un servidor de repositorios</h2>
+<h3 id="requisitos">Requisitos</h3>
+<p>Tener instalado los siguiente paquetes</p>
+<ul>
+<li>apache</li>
+</ul>
+<p><code>bash
+  sudo dnf install httpd</code></p>
+<ul>
+<li>createrepo</li>
+</ul>
+<p><code>bash
+  sudo dnf install createrepo</code></p>
+<h3 id="procedimiento">Procedimiento</h3>
+<ol>
+<li>Crear un directorio en <strong>/var/www/html</strong> donde guardaremos nuestros Packages  y repodata, tomar en cuenta que este deve tener una estructura como <strong>/var/www/html/repositorio/<SO>/<arquitectura></strong></li>
+</ol>
+<p><code>bash
+   mkdir /var/www/html/repositorio/fedora/x86_64</code></p>
+<ol>
+<li>Dentro de la anterior ruta crear el directorio <strong>Packages</strong></li>
+</ol>
+<p><code>bash
+   mkdir /var/www/html/repositorio/fedora/x86_64/Packages</code></p>
+<p>En este directorio guardaras todos los .rpm que deseas agregar a tu servidor.</p>
+<ol>
+<li>Ahora generaremos los metadatos xml:</li>
+</ol>
+<p><code>bash
+   createrepo /var/www/html/repositorio/fedora/x86_64</code></p>
+<p>El comando anterior generara un diretorio con nombre <strong>repodata</strong> el cual su contenido son los metadatos  xml, este comando se debe de ejecutar cuando su carpeta Package fue modificada(elimino o agrego un rpm).</p>
+<ol>
+<li>Apartir de ahora ya tiene su servidor de paquetes listo, solo tiene que añadir el repositorio tal y como aparace en esta pagina en el apartado <strong>Añadir repositorio</strong></li>
+</ol>
+<h2 id="enlaces-de-rpm-app">Enlaces de RPM app</h2>
+<ul>
+<li>
+<p><a href="https://anydesk.com/es/downloads/thank-you?dv=centos8_64">Anydesk</a></p>
+</li>
+<li>
+<p><a href="https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm">TeamViewer</a></p>
+</li>
+<li>
+<p><a href="https://rpm.opera.com/rpm/opera_stable-91.0.4516.65-linux-release-x64-signed.rpm">Opera</a></p>
+</li>
+</ul>
 
 
 
