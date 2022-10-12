@@ -32,22 +32,22 @@ dnf config-manager --ad-repo <urlrepo>
 Cuando agregue uno o varios repositorios nuevo es necesario hacer lo siguiente:
 
 1. Actualizar las listas de repositorios:
-   
-   ```bash
-   dnf update --refresh
-   ```
-   
-   + (OPCIONAL)si requiere eliminar los packequetes que fueron descargado anterior mente.
-   
-   ```bash
-   dnf clean all
-   ```
+
+```bash
+dnf update --refresh
+```
+
++ (OPCIONAL)si requiere eliminar los packequetes que fueron descargado anterior mente.
+
+```bash
+dnf clean all
+```
 
 2. Instale el paquete que se encuentra en el repositorio agregado:
-   
-   ```bash
-   dnf install <Nombredelpaquete>
-   ```
+
+```bash
+dnf install <Nombredelpaquete>
+```
 
 ---
 
@@ -57,45 +57,43 @@ Cuando agregue uno o varios repositorios nuevo es necesario hacer lo siguiente:
 
 Tener instalado los siguiente paquetes
 
-+ apache
-  
-  ```bash
-  sudo dnf install httpd
-  ```
++ Instalacion de apache
 
-+ createrepo
-  
-  ```bash
-  sudo dnf install createrepo
-  ```
+```bash
+sudo dnf install httpd
+```
+
++ Instalacion de createrepo
+
+```bash
+sudo dnf install createrepo
+```
 
 ### Procedimiento
 
 1. Crear un directorio en **/var/www/html** donde guardaremos nuestros Packages  y repodata, tomar en cuenta que este deve tener una estructura como **/var/www/html/repositorio/<SO>/<arquitectura>**
-   
-   ```bash
-   mkdir /var/www/html/repositorio/fedora/x86_64
-   ```
+
+```bash
+mkdir /var/www/html/repositorio/fedora/x86_64
+```
 
 2. Dentro de la anterior ruta crear el directorio **Packages**
-   
-   ```bash
-   mkdir /var/www/html/repositorio/fedora/x86_64/Packages
-   ```
-   
+
+```bash
+mkdir /var/www/html/repositorio/fedora/x86_64/Packages
+```
+
    En este directorio guardaras todos los .rpm que deseas agregar a tu servidor.
 
 3. Ahora generaremos los metadatos xml:
-   
-   ```bash
-   createrepo /var/www/html/repositorio/fedora/x86_64
-   ```
-   
+
+```bash
+createrepo /var/www/html/repositorio/fedora/x86_64
+```
+
    El comando anterior generara un diretorio con nombre **repodata** el cual su contenido son los metadatos  xml, este comando se debe de ejecutar cuando su carpeta Package fue modificada(elimino o agrego un rpm).
 
 4. Apartir de ahora ya tiene su servidor de paquetes listo, solo tiene que añadir el repositorio tal y como aparace en esta pagina en el apartado **Añadir repositorio**
-
-
 
 ## Enlaces de RPM app
 
