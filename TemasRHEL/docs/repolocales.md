@@ -26,7 +26,7 @@ gpgkey=
 2. usando el comando:
 
 ```bash
-dnf config-manager --ad-repo <urlrepo>
+dnf config-manager --add-repo <urlrepo>
 ```
 
 Cuando agregue uno o varios repositorios nuevo es necesario hacer lo siguiente:
