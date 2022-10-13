@@ -10,7 +10,7 @@ keytool -genkeypair -keyalg <RSA|DSA|EC> -alias <aliaskey>
 * Generar un par de claves en almacen definido en un path absoluto o relativo
 
 ```bash
-keytool -genkeypair -keyalg <RSA|DSA|EC> -alias <aliaskey> -keystore <path/name|name>
+keytool -genkeypair -keyalg <RSA|DSA|EC> -alias <aliaskey> -keystore <path/name|name>.<jks|keystore>
 ```
 
 * Ver todas las claves que tiene el almacen por defecto(~/.keystore)
@@ -23,7 +23,7 @@ keytool -list
 
 
 ```bash
-keytool -list -keystore <path/name|name>
+keytool -list -keystore <path/name|name>.<jks|keystore>
 ```
 
 * Ver cierta clave que tiene el almacen por defecto(~/.keystore) detallada.
@@ -36,7 +36,7 @@ keytool -list -alias <aliaskey> -v
 
 
 ```bash
-keytool -list -keystore <path/name|name> -alias <aliaskey> -v
+keytool -list -keystore <path/name|name>.<jks|keystore> -alias <aliaskey> -v
 ```
 
 
@@ -50,7 +50,7 @@ keytool -list -v
 
 
 ```bash
-keytool -list -keystore <path/name|name> -v
+keytool -list -keystore <path/name|name>.<jks|keystore> -v
 ```
 
 
@@ -64,7 +64,7 @@ keytool -list -rfc
 
 
 ```bash
-keytool -list -keystore <path/name|name> -rfc
+keytool -list -keystore <path/name|name>.<jks|keystore> -rfc
 ```
 
 
