@@ -534,7 +534,7 @@
 <ul>
 <li>Generar un par de claves en almacen definido en un path absoluto o relativo</li>
 </ul>
-<pre><code class="language-bash">keytool -genkeypair -keyalg &lt;RSA|DSA|EC&gt; -alias &lt;aliaskey&gt; -keystore &lt;path/name|name&gt;
+<pre><code class="language-bash">keytool -genkeypair -keyalg &lt;RSA|DSA|EC&gt; -alias &lt;aliaskey&gt; -keystore &lt;path/name|name&gt;.&lt;jks|keystore&gt;
 </code></pre>
 <ul>
 <li>Ver todas las claves que tiene el almacen por defecto(~/.keystore)</li>
@@ -544,7 +544,7 @@
 <ul>
 <li>Ver todas las claves que tiene el almacen definido en un path absoluto o relativo</li>
 </ul>
-<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt;
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt;.&lt;jks|keystore&gt;
 </code></pre>
 <ul>
 <li>Ver cierta clave que tiene el almacen por defecto(~/.keystore) detallada.</li>
@@ -554,7 +554,7 @@
 <ul>
 <li>Ver cierta clave que tiene el almacen definido en un path absoluto o relativo detallada.</li>
 </ul>
-<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt; -alias &lt;aliaskey&gt; -v
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt;.&lt;jks|keystore&gt; -alias &lt;aliaskey&gt; -v
 </code></pre>
 <ul>
 <li>Ver todas las claves que tiene el almacen por defecto(~/.keystore) detallada.</li>
@@ -564,7 +564,7 @@
 <ul>
 <li>Ver todas las claves que tiene el almacen definido en un path absoluto o relativo detallada.</li>
 </ul>
-<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt; -v
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt;.&lt;jks|keystore&gt; -v
 </code></pre>
 <ul>
 <li>Ver todas las claves que tiene el almacen por defecto(~/.keystore) con estilo rfc.</li>
@@ -574,7 +574,7 @@
 <ul>
 <li>Ver todas las claves que tiene el almacen definido en un path absoluto o relativo con estilo rfc.</li>
 </ul>
-<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt; -rfc
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt;.&lt;jks|keystore&gt; -rfc
 </code></pre>
 <hr />
 <h2 id="key-store">Key Store</h2>
