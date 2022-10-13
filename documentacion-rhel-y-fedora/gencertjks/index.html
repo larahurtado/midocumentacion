@@ -525,6 +525,57 @@
   <h1>Generación de Certificados JKS</h1>
 
 <h2 id="keytool">keytool</h2>
+<p>Es un comando que administra un almacen de claves(base de datos) de claves criptografica, cadena de certificados X.509 y certificados de confianza</p>
+<ul>
+<li>Generar un par de claves en almacen por defecto(~/.keystore)</li>
+</ul>
+<pre><code class="language-bash">keytool -genkeypair -keyalg &lt;RSA|DSA|EC&gt; -alias &lt;aliaskey&gt;
+</code></pre>
+<ul>
+<li>Generar un par de claves en almacen definido en un path absoluto o relativo</li>
+</ul>
+<pre><code class="language-bash">keytool -genkeypair -keyalg &lt;RSA|DSA|EC&gt; -alias &lt;aliaskey&gt; -keystore &lt;path/name|name&gt;
+</code></pre>
+<ul>
+<li>Ver todas las claves que tiene el almacen por defecto(~/.keystore)</li>
+</ul>
+<pre><code class="language-bash">keytool -list 
+</code></pre>
+<ul>
+<li>Ver todas las claves que tiene el almacen definido en un path absoluto o relativo</li>
+</ul>
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt;
+</code></pre>
+<ul>
+<li>Ver cierta clave que tiene el almacen por defecto(~/.keystore) detallada.</li>
+</ul>
+<pre><code class="language-bash">keytool -list -alias &lt;aliaskey&gt; -v 
+</code></pre>
+<ul>
+<li>Ver cierta clave que tiene el almacen definido en un path absoluto o relativo detallada.</li>
+</ul>
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt; -alias &lt;aliaskey&gt; -v
+</code></pre>
+<ul>
+<li>Ver todas las claves que tiene el almacen por defecto(~/.keystore) detallada.</li>
+</ul>
+<pre><code class="language-bash">keytool -list -v
+</code></pre>
+<ul>
+<li>Ver todas las claves que tiene el almacen definido en un path absoluto o relativo detallada.</li>
+</ul>
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt; -v
+</code></pre>
+<ul>
+<li>Ver todas las claves que tiene el almacen por defecto(~/.keystore) con estilo rfc.</li>
+</ul>
+<pre><code class="language-bash">keytool -list -rfc
+</code></pre>
+<ul>
+<li>Ver todas las claves que tiene el almacen definido en un path absoluto o relativo con estilo rfc.</li>
+</ul>
+<pre><code class="language-bash">keytool -list -keystore &lt;path/name|name&gt; -rfc
+</code></pre>
 <hr />
 <h2 id="key-store">Key Store</h2>
 <hr />
