@@ -72,6 +72,7 @@ keytool -list -keystore <path/name|name> -rfc
 ---
 ## Key Store
 
+Es una interfaz grafica para la herramienta keytool
 
 
 ---
