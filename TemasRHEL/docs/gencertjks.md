@@ -5,15 +5,20 @@ Es un comando que administra un almacen de claves(base de datos) de claves cript
 * Generar un par de claves en almacen por defecto(~/.keystore)
 
 ```bash
-keytool -genkeypair -keyalg <RSA|DSA|EC>  
+keytool -genkeypair -keyalg <RSA|DSA|EC> -alias <aliaskey>
 ```
 * Generar un par de claves en almacen definido en un path absoluto o relativo
 
 ```bash
-keytool -genkeypair -keyalg <RSA|DSA|EC>  -keystore <path/name|name>
+keytool -genkeypair -keyalg <RSA|DSA|EC> -alias <aliaskey> -keystore <path/name|name>
 ```
 
-Parametros opcionales
+* Ver todas las claves que tiene el almacen por defecto(~/.keystore)
+
+```bash
+keytool -genke-keystore 
+```
+
 
 
 ---
