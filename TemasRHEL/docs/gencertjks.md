@@ -26,17 +26,31 @@ keytool -list
 keytool -list -keystore <path/name|name>
 ```
 
+* Ver cierta clave que tiene el almacen por defecto(~/.keystore) detallada.
+
+```bash
+keytool -list -alias <aliaskey> -v 
+```
+
+* Ver cierta clave que tiene el almacen definido en un path absoluto o relativo detallada.
+
+
+```bash
+keytool -list -keystore <path/name|name> -alias <aliaskey> -v
+```
+
+
 * Ver todas las claves que tiene el almacen por defecto(~/.keystore) detallada.
 
 ```bash
-keytool -list 
+keytool -list -v
 ```
 
 * Ver todas las claves que tiene el almacen definido en un path absoluto o relativo detallada.
 
 
 ```bash
-keytool -list -keystore <path/name|name>
+keytool -list -keystore <path/name|name> -v
 ```
 
 
