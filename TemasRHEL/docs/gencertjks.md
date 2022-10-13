@@ -26,6 +26,33 @@ keytool -list
 keytool -list -keystore <path/name|name>
 ```
 
+* Ver todas las claves que tiene el almacen por defecto(~/.keystore) detallada.
+
+```bash
+keytool -list 
+```
+
+* Ver todas las claves que tiene el almacen definido en un path absoluto o relativo detallada.
+
+
+```bash
+keytool -list -keystore <path/name|name>
+```
+
+
+* Ver todas las claves que tiene el almacen por defecto(~/.keystore) con estilo rfc.
+
+```bash
+keytool -list -rfc
+```
+
+* Ver todas las claves que tiene el almacen definido en un path absoluto o relativo con estilo rfc.
+
+
+```bash
+keytool -list -keystore <path/name|name> -rfc
+```
+
 
 
 ---
