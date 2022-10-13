@@ -16,7 +16,14 @@ keytool -genkeypair -keyalg <RSA|DSA|EC> -alias <aliaskey> -keystore <path/name|
 * Ver todas las claves que tiene el almacen por defecto(~/.keystore)
 
 ```bash
-keytool -genke-keystore 
+keytool -list 
+```
+
+* Ver todas las claves que tiene el almacen definido en un path absoluto o relativo
+
+
+```bash
+keytool -list -keystore <path/name|name>
 ```
 
 
